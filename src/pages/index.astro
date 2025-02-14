@@ -1,11 +1,52 @@
 ---
-import Welcome from '../components/Welcome.astro';
-import Layout from '../layouts/Layout.astro';
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout>
-	<Welcome />
+  <main class="flex flex-col items-center justify-center min-h-screen py-8 px-4 gap-5">
+    <div
+      class="flex flex-wrap items-center justify-center gap-8 sm:gap-16 md:gap-24 lg:gap-32 w-full"
+    >
+      <div class="pt-16 sm:pt-8">
+        <h2 class="text-3xl sm:text-4xl md:text-5xl text-turq">Hi there, I'm</h2>
+        <h1 class="text-4xl sm:text-5xl md:text-7xl">David Vallejo</h1>
+        <h2 class="text-3xl sm:text-4xl md:text-5xl text-turq">Fullstack Developer</h2>
+      </div>
+      <div class="relative w-[60%] sm:w-[70%] md:w-[80%] max-w-[250px] aspect-square">
+        <img
+          src="/portrait.png"
+          alt="David Vallejo Portrait"
+          class="w-full h-full object-cover rounded-[3.5rem] relative z-10 shadow-[0_0_27px_10px_rgba(0,0,0,0.25)] filter drop-shadow-custom"
+        />
+      </div>
+    </div>
+    <div 
+      class="flex flex-col items-center justify-center outline-8 rounded-4xl outline-darkBlu mx-auto py-7 w-full max-w-[800px] gap-8 m-10"
+    >
+      <h2 class="text-turq text-5xl">Find me at</h2>
+      <div class="flex justify-between w-full max-w-md gap-4">
+        <a href="https://discordapp.com/users/devalle99">
+          <div class="rounded-full bg-lightBlu w-20 p-2">
+            <img src="/discord.png" alt="Discord icon" />
+          </div>
+        </a>
+        <a href="https://github.com/Devalle99">
+          <div class="rounded-full bg-lightBlu w-20 p-2">
+            <img src="/github.png" alt="GitHub icon" />
+          </div>
+        </a>
+        <a href="https://www.linkedin.com/in/devalle99/">
+          <div class="rounded-full bg-lightBlu w-20 p-4">
+            <img src="/linkedin.png" alt="LinkedIn icon" />
+          </div>
+        </a>
+      </div>
+    </div>
+  </main>
 </Layout>
+
+<style>
+  .drop-shadow-custom {
+    filter: drop-shadow(15px 15px 0px #00738b);
+  }
+</style>
